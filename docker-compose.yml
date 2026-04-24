@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      args:
+        VITE_PINATA_PROJECT_ID: ${VITE_PINATA_PROJECT_ID}
+        VITE_PINATA_PROJECT_SECRET: ${VITE_PINATA_PROJECT_JWT}
+        VITE_VAULT_CONTRACT: ${VITE_VAULT_CONTRACT}
+    ports:
+      - "3000:80"
